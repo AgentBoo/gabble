@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Gabble with sequelize </title>
+    <link rel="stylesheet" href="./../public/css/index.css">
+  </head>
+
+  <body>
+    <header>
+      <a href="/gabble"> Gabble </a>
+      <a href="/creategab"> Create a new gab </a>
+      <a href="/login"> Log in </a>
+      <a href="/signup"> Sign up </a>
+    </header>
+
+    <main>
+      <h2> Sign up  </h2>
+      <h2> {{message}} </h2>
+      <form method="post">
+        <table>
+          <tr> <td> <label for="username"> Username </label> </td> </tr>
+          <tr> <td> <input type="text" name="username" id="username" value="Gabble"> </td> </tr>
+          <tr> <td> <p> {{ message }} </p> </td> </tr>
+
+          <tr> <td> <label for="displayedName"> Displayed name </label> </td> </tr>
+          <tr> <td> <input type="text" name="displayedName" id="displayedName" value="gabble"> </td> </tr>
+
+          <tr> <td> <label for="password"> Password </label> </td> </tr>
+          <tr> <td> <input type="password" name="password" id="password" value="gabble"> </td> </tr>
+
+          <tr> <td> <label for="passwordConfirm"> Password Confirmation </label> </td> </tr>
+          <tr> <td> <input type="password" name="passwordConfirm" id="passwordConfirm" value="gabble"> </td> </tr>
+        </table>
+        <br>
+        <br>
+        <button type="submit" formaction='/signedup'> Sign up </button>
+      </form>
+  </main>
+
+    <script src="./../public/js/index.js"></script>
+  </body>
+</html>

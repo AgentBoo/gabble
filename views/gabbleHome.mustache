@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Gabble with sequelize </title>
+    <link rel="stylesheet" href="./../public/css/index.css">
+  </head>
+
+  <body>
+    <main>
+      <h1> Gabble </h1>
+      {{#gabble}}
+      <span> {{User.username}} </span>
+      <p>{{text}} </p>
+      <p> {{createdAt}} </p>
+      <p> {{likedBy}} </p>
+      <form method="post">
+        <button type="submit" formaction='/likes/{{id}}' name="like" value="{{User.username}}"> Like </button>
+        <button type="submit" formaction='/delete/{{id}}'> Delete </button>
+      </form>
+      {{/gabble}}
+    </main>
+
+    <script src="./../public/js/index.js"></script>
+  </body>
+</html>
